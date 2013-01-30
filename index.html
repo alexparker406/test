@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    
+    
+    
+<!------------ INDEX -----------------
+
+(*1) CLIENT INFORMATION
+(*2) TAB TITLE
+(*3) TAB CONTENT
+
+------------------------------------>    
+    
+    
+    
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="../jix/w2t.ico" />
+	<title>Bopgn Client Page</title>
+	<link type='text/css' rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' />
+	<style type="text/css">
+</style>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script>
+    $(document).ready(function() {
+        // jBar Script by Todd Motto
+        $('.downbar').delay(1000).fadeIn(200).addClass('up');
+        $('.jquery-bar').hide().delay(2500).slideDown(400);
+        $('.jquery-arrow').click(function(){
+            $('.downbar').toggleClass('up', 400);          
+            $('.jquery-bar').slideToggle();
+        });     
+    });
+</script>
+	
+	<style type="text/css" media="screen">
+body {padding: 0; font: 1em "Trebuchet MS", verdana, arial, sans-serif; font-size: 100%;}
+
+h1 {margin-bottom: 2px; font-family: Garamond, "Times New Roman", Times, Serif;}
+
+div.container {margin: auto; width: 90%; margin-bottom: 10px; }
+textarea {width: 80%;}
+
+fieldset {border: 1px solid #ccc; padding: 1em; margin: 0;}
+
+legend {color: #ccc; font-size: 120%;}
+
+input, textarea {font-family: Arial, verdana; font-size: 125%; padding: 7px; border: 1px solid #999;}
+
+lable {display: block; margin-top: 10px;}
+
+img {margin:0;}
+
+ul.tabNavigation {list-style: none; margin: 0; padding-right: 70px;}
+
+ul.tabNavigation li {display: inline; margin:auto;}
+
+ul.tabNavigation li a {padding: 0px 5px; background-color: #666; color: #FFF; text-decoration: none;}
+
+ul.tabNavigation li A.selected,  ul.tabNavigation li A:hover {background-color:#FFF; color: #000;}
+
+ul.tabNavigation LI A:focus {outline: 0;}
+
+div.tabs > div {padding: 0px;margin-top:0px;}
+
+div.tabs > div h2 {margin-top: 0;}
+
+.jquery-bar {background: rgb(192, 0, 16); /* #FAFAFA */width:100%; position: relative; margin:0px 0px 0px 0px; padding: 0px 0px 0px 0px; font-size:14px; font-family: 'Lato Regular', Arial; text-transform:uppercase;}
+
+.jquery-bar .notification {display:block; width:auto;}
+
+.downbar {cursor:pointer; top:0px; right:50px; padding:0px 3px 0px 3px; position:absolute; background:rgb(192, 0, 16); border-radius:0px 0px 5px 5px;	border:2px solid #fff; border-top:none;}
+
+.downbar:hover{background: rgb(192, 0, 16); cursor:pointer;}
+
+.down {position:absolute;top:2px;right:60px;}
+
+.up {top: -45px; display: none;}
+
+.arrow {cursor:pointer;}
+
+.font-style{text-align: center;}
+
+.font-style a{color:#CC0000; font-size:15px; text-decoration:underline; text-transform:none;}
+
+.hide{  color:#FFF; text-transform: none;}
+
+-->
+</style>
+	<script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+                $(function () {
+                        var tabContainers = $('div.tabs > div');
+                        tabContainers.hide().filter(':first').show();
+                        
+                        $('div.tabs ul.tabNavigation a').click(function () {
+                                tabContainers.hide();
+                                tabContainers.filter(this.hash).show();
+                                $('div.tabs ul.tabNavigation a').removeClass('selected');
+                                $(this).addClass('selected');
+                                return false;
+                        }).filter(':first').click();
+                });
+        </script>
+
+	<!-- Demo styles only -->
+	<style>
+		* {margin:0;padding:0;}
+		a img {border:none;}
+		a {text-decoration:none;}
+		body {font:400 12px/1.625 "Helvetica Neue", Helvetica, Arial, sans-serif;-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;
+		-o-font-smoothing:antialiased;font-smoothing:antialiased;text-rendering:optimizeLegibility;color:#444;background:#FFFFFF;}
+		.wrapper {max-width:1000px;width:95%;margin:0 auto;position:relative;}
+		#header {overflow:auto;background:#33363C;border-top:5px solid #2F3135;border-bottom:2px solid #04A4CC;}
+		#logo {float:left;margin:10px 50px 5px;}
+		#logo img {width:80px;height:36px;}
+		#view-tut {float:right;font-size:13px;font-weight:900;margin:10px 50px 5px;}
+		#view-tut ul {margin:0;}
+		#view-tut ul li {display:inline-block;*display:inline;zoom:1;margin:0 5px 0 0;}
+		#view-tut ul li a {display:block;padding:5px 10px;background:#04A4CC;color:#FFF;border-radius:20px;}
+		#view-tut ul li a:hover {background:#0097CD;}
+		#main p {padding:0;margin:10px 0 0;}
+		#footer {clear:both;}
+		.job_info{ float:left; margin-left:5px; color:#FFF !important; font-weight:bold;}	
+	</style>
+
+	<!-- Analytics (Demo only) -->
+	<script>
+		var _gaq=[['_setAccount','UA-20440416-10'],['_trackPageview']];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>
+	</head>
+	<body>
+
+<!-- Start jQuery Notification Bar -->
+<div class="jquery-bar"> 
+
+	<span class="notification">
+
+  	<p class="font-style">
+  
+  	<img src="img/bopgun_logo.png" width="98" height="22" style="float:left; padding:0px;">
+    
+    <!------------ (*1)CLIENT DETAILS ----------------->
+    <div class="job_info">Client: *** | Project: *** | Ref: *** | Date **/**/**</div><br />
+		
+        <div class="tabs">
+    	
+	<ul class="tabNavigation">
+    
+    <!------------ (*2)TAB TITLE ----------------->
+		<li><img src="img/tabs.png" width="97" height="22" alt="tabs" /></li>
+		<li><a href="#1">First</a></li>
+      	<li><a href="#2">Second</a></li>
+      	<li><a href="#3">Third</a></li>
+      	<li><a href="#4">Fouth</a></li>
+      	<li><a href="#5">Five</a></li>
+      	<li><a href="#6">Six</a></li>
+      	<li><a href="#7">Seven</a></li>
+      	<li><a href="#8">Eight</a></li>
+      	<li><a href="#9">Nine</a></li>
+      	<li><a href="#10">Ten</a></li>
+    </ul>
+    
+  </div>
+  
+  
+  </p>
+  
+  <p class="jquery-arrow down"><img src="img/up-arrow.png" alt="Click to Hide Notification" style="cursor:pointer;"></p>
+  
+	</span>
+  
+</div>
+
+	<span class="downbar jquery-arrow"><img src="img/down-arrow.png" alt="Click to Show Notification" style="cursor:pointer;"></span> 
+<!-- End jQuery Notification Bar --> 
+
+<!------------ (*3)TAB CONTENT ----------------->
+
+<div class="tabs" style="margin:auto; width:1000px; ">
+<!---------------------------------->
+  <div id="1">    
+    <p><img src="img/300x250.png" width="970" height="269"></p> 
+  </div>
+<!---------------------------------->  
+  <div id="2">
+    <p>CONTENT 2 HERE</p>
+  </div>
+<!---------------------------------->  
+  <div id="3">
+    <p>CONTENT 3 HERE</p>
+  </div>
+<!---------------------------------->  
+  <div id="4">
+    <p>CONTENT 4 HERE</p>
+  </div>
+<!---------------------------------->  
+  <div id="5">
+    <p>CONTENT 5 HERE</p>
+  </div>
+<!---------------------------------->  
+  <div id="6">
+    <p>CONTENT 6 HERE</p>
+  </div>
+<!----------------------------------> 
+  <div id="7">
+    <p>CONTENT 7 HERE</p>
+  </div>
+<!---------------------------------->  
+  <div id="8">
+    <p>CONTENT 8 HERE</p>
+  </div>
+<!---------------------------------->  
+  <div id="9">
+    <p>CONTENT 9 HERE</p>
+  </div>
+<!---------------------------------->  
+  <div id="10">
+    <p>CONTENT 10 HERE</p>
+  </div>
+<!---------------------------------->  
+    </div>
+</body>
+</html>
